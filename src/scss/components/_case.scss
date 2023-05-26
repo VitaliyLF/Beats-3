@@ -1,0 +1,48 @@
+.case {
+  background-color: var(--main-black);
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__wrapper {
+    @include flex-all-center;
+  }
+
+  &__image {
+    margin-right: 80px;
+  }
+
+  &__content {
+    max-width: 242px;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 46px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--text-color);
+  }
+
+  &__btn {
+    position: relative;
+    padding: 16px 23px;
+    padding-left: 62px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      width: 25px;
+      height: 25px;
+      transform: translateY(-50%);
+      background-image: url(../img/info-btn.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}

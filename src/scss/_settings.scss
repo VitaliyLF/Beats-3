@@ -112,8 +112,20 @@ a {
   position: relative;
 }
 
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 108px;
+  text-align: center;
+}
+
 .text-gradient {
   background: var(--text-gradient-color);
   background-clip: text;
   color: transparent;
+}
+
+.section-offset {
+  padding-top: 135px;
 }

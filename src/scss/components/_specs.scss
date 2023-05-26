@@ -1,0 +1,81 @@
+.specs {
+  background-color: var(--main-black);
+
+  &__title {
+    margin-bottom: 34px;
+  }
+
+  &__wrapper {
+    @include flex-all-center;
+  }
+
+  &__list {
+    margin-right: 78px;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 25px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-size: 25px 25px;
+      background-position: top center;
+    }
+
+    &--bluetooth {
+      padding-left: 24px;
+      margin-bottom: 24px;
+      &::after {
+        left: 24px;
+        background-image: url(../img/bluetooth.svg);
+      }
+    }
+
+    &--battery {
+      margin-bottom: 21px;
+      &::after {
+        background-image: url(../img/battery.svg);
+      }
+    }
+
+    &--load {
+      margin-bottom: 18px;
+      &::after {
+        background-image: url(../img/load.svg);
+      }
+    }
+
+    &--micro {
+      padding-left: 24px;
+      &::after {
+        left: 24px;
+        background-image: url(../img/micro.svg);
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-color);
+  }
+
+  &__descr {
+    max-width: 134px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--text-color);
+  }
+}
