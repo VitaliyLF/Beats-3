@@ -1,5 +1,4 @@
 .hero {
-  padding-top: 135px;
   background-color: var(--main-black);
 
   &__wrapper {
@@ -57,14 +56,15 @@
 
   &__btn {
     max-width: 248px;
-    padding: 12px 41px;
+    padding: 12px 19px;
+    padding-left: 60px;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
       top: 50%;
-      left: 10px;
+      left: 22px;
       transform: translateY(-50%);
       width: 24px;
       height: 24px;
