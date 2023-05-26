@@ -13,8 +13,22 @@
         <p class="case__descr">With a comfortable and adaptable case so that you can store it whenever you want, and
           keep
           your durability forever.</p>
-        <button class="case__btn btn btn-reset">More info</button>
+        <button class="case__btn btn btn-reset" aria-label="More info">More info</button>
       </div>
+    </div>
+    <div class="case__sale sale">
+      <div class="sale__content">
+        <h3 class="sale__title">Immerse yourself in your music</h3>
+        <p class="sale__descr">Buy Now, up to 40% off.</p>
+        <button class="sale__btn btn btn-reset" aria-label="Buy now">Buy now</button>
+      </div>
+      <picture>
+        <source media="(min-width: 576px)" srcset="img/sale-image_2x.webp 2x" type="image/webp">
+        <source media="(max-width: 575px)" srcset="img/sale-image.webp" type="image/webp">
+        <source srcset="img/sale-image.webp" type="image/webp">
+        <img loading="lazy" src="img/sale-image.png" srcset="img/sale-image__2x.png 2x" class="image" width="350"
+          height="241" alt="Beats 3 folded in half">
+      </picture>
     </div>
   </div>
 </section>
