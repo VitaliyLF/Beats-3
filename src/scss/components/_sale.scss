@@ -1,0 +1,48 @@
+.sale {
+  @include flex-all-sb;
+
+  padding: 48px 146px;
+  max-width: 100%;
+  background-color: var(--woodsmoke-color);
+  border-radius: 12px;
+
+  &__content {
+    max-width: 242px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--gray-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+  }
+
+  &__btn {
+    background-color: var(--full-black-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 22px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/bag-icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}

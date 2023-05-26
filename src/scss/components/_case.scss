@@ -7,6 +7,8 @@
 
   &__wrapper {
     @include flex-all-center;
+
+    padding-bottom: 120px;
   }
 
   &__image {
@@ -27,10 +29,6 @@
   }
 
   &__btn {
-    position: relative;
-    padding: 16px 23px;
-    padding-left: 62px;
-
     &::after {
       content: "";
       position: absolute;

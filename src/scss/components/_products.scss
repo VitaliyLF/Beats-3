@@ -1,0 +1,90 @@
+.products {
+  padding-bottom: 176px;
+  background-color: var(--main-black);
+
+  &__title {
+    margin: 0 auto;
+    max-width: 355px;
+    margin-bottom: 126px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 100px 45px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 162px;
+    min-height: 152px;
+    grid-column: 2 span;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--woodsmoke-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    @include hover {
+      transform: translateY(-40px);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__color {
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--gray-color);
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-color);
+  }
+
+  &__btn {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-100%);
+      width: 35px;
+      height: 35px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--full-black-color);
+      background-image: url(../img/bag-icon.svg);
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      background-position: center center;
+    }
+  }
+}
