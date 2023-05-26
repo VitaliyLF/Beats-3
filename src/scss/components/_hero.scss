@@ -1,0 +1,89 @@
+.hero {
+  padding: 135px 0;
+  background-color: var(--main-black);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 131px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+
+  &__content {
+    max-width: 488px;
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 96px;
+    color: var(--gray-color);
+  }
+
+  &__gradient {
+    display: block;
+    padding-left: 50px;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 96px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--gray-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 39px;
+    max-width: 398px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--text-color);
+  }
+
+  &__btn {
+    max-width: 248px;
+    padding: 12px 41px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/bag-icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  &__num {
+    padding-left: 13px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--light-color);
+  }
+
+  &__parthers {
+    @include flex-all-sb;
+  }
+}
