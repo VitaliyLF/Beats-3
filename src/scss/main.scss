@@ -3,6 +3,7 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "keyframes";
 
 // подключения компонентов страницы
 @import "./components/nav";
@@ -13,3 +14,4 @@
 @import "./components/specs";
 @import "./components/case";
 @import "./components/products";
+@import "./components/footer";

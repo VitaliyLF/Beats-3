@@ -1,0 +1,136 @@
+.footer {
+  background-color: var(--main-black);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+  }
+
+  &__copy {
+    display: block;
+    padding-bottom: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  &__form {
+    .footer-form__label {
+      width: 346px;
+    }
+  }
+}
+
+.footer-nav {
+  display: flex;
+
+  &__col {
+    @include mr(140px);
+  }
+
+  &__item {
+    @include mb(9px);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--gray-color);
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--text-color);
+  }
+}
+
+.footer-form {
+  &__wrapper {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__input {
+    width: 100%;
+    height: 67px;
+    padding-left: 16px;
+    padding-right: 160px;
+    background-color: var(--woodsmoke-color);
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--light-color);
+
+    &::placeholder {
+      color: var(--text-color);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    max-width: 130px;
+    padding: 18px 49px 18px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: var(--light-color);
+    background: var(--main-black);
+    border-radius: 8px;
+    background-image: url(../img/arrow-btn.svg);
+    background-repeat: no-repeat;
+    background-position: left 21px center;
+    z-index: 100;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @include mr(20px);
+
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--woodsmoke-color);
+    border-radius: 4px;
+  }
+
+  &__link {
+    display: inline-flex;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: cover;
+      fill: var(--light-color);
+      opacity: 0.5;
+      transition: opacity 0.3s ease, fill 0.3s ease;
+    }
+
+    @include hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
