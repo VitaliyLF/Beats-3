@@ -78,4 +78,8 @@
     line-height: 20px;
     color: var(--text-color);
   }
+
+  &__image {
+    animation: on-ear 1.5s ease-in-out infinite both;
+  }
 }
