@@ -19,6 +19,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  background-color: var(--main-black);
 }
 
 img {
@@ -130,8 +131,69 @@ a {
   background: var(--text-gradient-color);
   background-clip: text;
   color: transparent;
+  text-align: center;
+
+  @include mobile {
+    font-size: 56px;
+    line-height: 84px;
+  }
 }
 
 .section-offset {
   padding-top: 135px;
+
+  @include mobile {
+    padding-top: 100px;
+  }
+}
+
+.burger {
+  @include burger;
+
+  --burger-height: 20px;
+
+  display: none;
+  color: var(--light-color);
+  z-index: 1000;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.to-top {
+  position: fixed;
+  bottom: 94px;
+  right: calc((100% - var(--container-width)) / 2);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  @include tablet {
+    bottom: 50px;
+    right: 25px;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--woodsmoke-color);
+    border-radius: 4px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+      fill: var(--light-color);
+    }
+  }
 }

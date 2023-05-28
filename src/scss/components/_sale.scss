@@ -6,8 +6,20 @@
   background-color: var(--woodsmoke-color);
   border-radius: 12px;
 
+  @include small-tablet {
+    padding: 24px 30px;
+  }
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+
   &__content {
     max-width: 242px;
+
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -43,6 +55,14 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
+    }
+  }
+
+  &__image {
+    display: block;
+
+    @include mobile {
+      margin-bottom: 30px;
     }
   }
 }

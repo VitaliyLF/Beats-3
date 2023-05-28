@@ -1,21 +1,39 @@
 .hero {
   background-color: var(--main-black);
+  min-height: 720px;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 131px;
+    margin-bottom: 131px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      padding-top: 120px;
+      margin-bottom: 86px;
+    }
   }
 
   &__image {
+    display: block;
     position: absolute;
     top: 0;
     z-index: 10;
+
+    @include small-tablet {
+      top: -150px;
+      right: 0;
+    }
   }
 
   &__content {
     max-width: 488px;
     flex-grow: 1;
+    z-index: 15;
   }
 
   &__title {
@@ -25,15 +43,32 @@
     font-size: 64px;
     line-height: 96px;
     color: var(--gray-color);
+
+    @include mobile {
+      font-size: 40px;
+      line-height: 60px;
+      margin-bottom: 40px;
+    }
   }
 
   &__gradient {
+    @include updown;
+
     display: block;
     padding-left: 50px;
     font-weight: 600;
     font-size: 120px;
     line-height: 96px;
-    animation: text-animation 2s infinite;
+    animation: updown 2s infinite;
+
+    @include small-tablet {
+      padding-left: 20px;
+    }
+
+    @include mobile {
+      font-size: 80px;
+      line-height: 96px;
+    }
   }
 
   &__subtitle {
@@ -43,6 +78,11 @@
     font-size: 20px;
     line-height: 30px;
     color: var(--gray-color);
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__descr {
@@ -53,6 +93,10 @@
     font-size: 16px;
     line-height: 32px;
     color: var(--text-color);
+
+    @include mobile {
+      margin-bottom: 51px;
+    }
   }
 
   &__btn {
@@ -86,5 +130,23 @@
 
   &__parthers {
     @include flex-all-sb;
+
+    flex-wrap: wrap;
+  }
+
+  &__parthers-item {
+    @include mobile {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__parthers-link {
+    display: block;
+
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 10px;
+    }
   }
 }

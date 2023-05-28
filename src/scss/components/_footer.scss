@@ -4,7 +4,13 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 150px;
+    margin-bottom: 150px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+    }
   }
 
   &__copy {
@@ -20,7 +26,7 @@
 
   &__form {
     .footer-form__label {
-      width: 346px;
+      max-width: 346px;
     }
   }
 }
@@ -28,8 +34,16 @@
 .footer-nav {
   display: flex;
 
+  @include small-tablet {
+    margin-bottom: 30px;
+  }
+
   &__col {
     @include mr(140px);
+
+    @include mobile {
+      @include mr(70px);
+    }
   }
 
   &__item {
@@ -46,10 +60,46 @@
   }
 
   &__link {
+    position: relative;
+    overflow: hidden;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
     color: var(--text-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--light-color);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s;
+      opacity: 0;
+    }
+
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 6px;
+    }
+
+    @include hover {
+      &::after {
+        @include fillAnimation;
+
+        animation: fillAnimation 0.3s linear forwards;
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      color: var(--text-color);
+    }
   }
 }
 
@@ -57,6 +107,11 @@
   &__wrapper {
     position: relative;
     margin-bottom: 32px;
+
+    .just-validate-error-label {
+      padding-top: 10px;
+      color: var(--light-color) !important;
+    }
   }
 
   &__label {
@@ -81,9 +136,8 @@
 
   &__btn {
     position: absolute;
-    top: 50%;
+    top: 8px;
     right: 13px;
-    transform: translateY(-50%);
     max-width: 130px;
     padding: 18px 49px 18px;
     font-weight: 400;
@@ -101,6 +155,10 @@
 
   &__list {
     display: flex;
+
+    @include mobile {
+      justify-content: center;
+    }
   }
 
   &__item {
