@@ -1,0 +1,11 @@
+Beats 3 Comfort Headphones [(Landing page)](https://vetosy.github.io/Beats-3)
+- Волатильная,Адаптивная,Кроссбраузерная верстка
+- SCSS препроцессор
+- Gulp сборка
+- БЭМ
+- JS
+- SVG изображения и оптимизация
+- Pixel Perfect
+- Зеленая зона Google Lighthouse
+- Модульность
+- Реализация анимации блоков
