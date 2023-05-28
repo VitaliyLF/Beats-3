@@ -2,16 +2,67 @@
   &__list {
     display: flex;
     margin-right: 95px;
+
+    @include tablet {
+      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
     @include mr(58px);
+
+    @include tablet {
+      @include mr(0);
+    }
   }
 
   &__link {
+    position: relative;
+    overflow: hidden;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: var(--light-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--light-color);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s;
+      opacity: 0;
+    }
+
+    @include tablet {
+      font-size: 35px;
+      line-height: 50px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 6px;
+    }
+
+    @include hover {
+      &::after {
+        @include fillAnimation;
+
+        animation: fillAnimation 0.3s linear forwards;
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      color: var(--text-color);
+    }
   }
 }

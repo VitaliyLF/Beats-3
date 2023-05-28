@@ -8,15 +8,30 @@
   &__wrapper {
     @include flex-all-center;
 
-    padding-bottom: 120px;
+    margin-bottom: 120px;
   }
 
   &__image {
+    @include updown;
+
+    display: block;
     margin-right: 80px;
+    animation: updown 2s infinite;
+
+    @include mobile {
+      display: block;
+      animation: none;
+      transform: translateX(-50px);
+      margin-right: 0;
+    }
   }
 
   &__content {
     max-width: 242px;
+
+    @include mobile {
+      max-width: 60%;
+    }
   }
 
   &__descr {

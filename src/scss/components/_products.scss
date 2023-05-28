@@ -2,6 +2,10 @@
   padding-bottom: 176px;
   background-color: var(--main-black);
 
+  @include mobile {
+    padding-bottom: 50px;
+  }
+
   &__title {
     margin: 0 auto;
     max-width: 355px;
@@ -13,6 +17,11 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 100px 45px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: initial;
+    }
   }
 
   &__item {
@@ -31,13 +40,29 @@
     @include hover {
       transform: translateY(-40px);
     }
+
+    @include mobile {
+      grid-column: 1 span;
+    }
+  }
+
+  &__link {
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 6px;
+    }
   }
 
   &__image {
+    display: block;
     position: absolute;
     top: -48px;
     left: 50%;
     transform: translateX(-50%);
+
+    @include mobile {
+      top: -60px;
+    }
   }
 
   &__info {
@@ -85,6 +110,16 @@
       background-repeat: no-repeat;
       background-size: 18px 18px;
       background-position: center center;
+
+      @include mobile {
+        bottom: -10px;
+        left: 10px;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid var(--light-color);
+      outline-offset: 6px;
     }
   }
 }

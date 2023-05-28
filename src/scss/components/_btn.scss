@@ -16,6 +16,8 @@
 
   @include hover {
     &::before {
+      @include shine;
+
       content: "";
       position: absolute;
       top: 0;
