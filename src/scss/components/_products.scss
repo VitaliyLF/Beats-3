@@ -54,6 +54,10 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @include mobile {
+      top: -60px;
+    }
+
     &:focus {
       outline: 2px solid var(--light-color);
       outline-offset: 6px;
