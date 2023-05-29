@@ -1169,6 +1169,11 @@ a {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+@media (max-width: 576px) {
+  .products__link {
+    top: -60px;
+  }
+}
 .products__link:focus {
   outline: 2px solid var(--light-color);
   outline-offset: 6px;
