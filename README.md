@@ -8,5 +8,5 @@ Beats 3 Comfort Headphones [(Landing page)](https://vetosy.github.io/Beats-3)
 - Pixel Perfect
 - Зеленая зона Google Lighthouse
 - Зеленая зона The W3C Markup Validation
-- Модульность
+- СSS анимации
 - Реализация анимации блоков
