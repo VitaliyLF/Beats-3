@@ -1,12 +1,19 @@
-Beats 3 Comfort Headphones [(Landing page)](https://vetosy.github.io/Beats-3)
-- Волатильная,Адаптивная,Кроссбраузерная верстка
+# Beats 3 Comfort Headphones [(Ссылка на проект)](https://vetosy.github.io/Beats-3)
+
+## 🛠 Стэк
+- HTML5
 - SCSS препроцессор
 - Gulp сборка
 - БЭМ
 - JS
-- SVG изображения и оптимизация
+
+[![My Skills](https://skillicons.dev/icons?i=js,html,scss,figma,gulp,)](https://skillicons.dev)
+
+## :clipboard: Что я реализовал:
 - Pixel Perfect
-- Зеленая зона Google Lighthouse
-- Зеленая зона The W3C Markup Validation
 - СSS анимации
-- Реализация анимации блоков
+- Зеленая зона The W3C Markup Validation
+- Анимация блоков
+- Валидация формы
+- Зеленая зона Google Lighthouse
+- SVG изображения и оптимизация
