@@ -6,8 +6,9 @@
 - Gulp сборка
 - БЭМ
 - JS
+- Ps
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,scss,figma,gulp,)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,scss,ps,gulp,)](https://skillicons.dev)
 
 ## :clipboard: Что я реализовал:
 - Pixel Perfect
