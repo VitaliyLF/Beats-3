@@ -8,7 +8,7 @@
 - Gulp сборка
 - PS
 
-[![My Skills](https://skillicons.dev/icons?i=html,scss,js,gulp,svg,ps)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,scss,js,gulp,ps)](https://skillicons.dev)
 
 ## :clipboard: Что я реализовал:
 - Pixel Perfect
