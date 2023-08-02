@@ -1,5 +1,7 @@
 # Beats 3 Comfort Headphones [(Ссылка на проект)](https://vetosy.github.io/Beats-3)
 
+<a href="https://vetosy.github.io/Beats-3/"><img src="https://i.ibb.co/vwHQgRW/portfolio-5-2x.jpg" alt="portfolio-5-2x" border="0"></a>
+
 ## 🛠 Что я использовал:
 - HTML5
 - SCSS препроцессор
